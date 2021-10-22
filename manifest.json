@@ -2,14 +2,17 @@
   "name": "LeetcodeListStats",
   "short_name": "LeetcodeListStats",
   "description": "Mark website if it is outside of visit hours",
-  "manifest_version": 3,
-  "version": "0.1",
+  "version": "1.0.1",
   "permissions": [
-    "activeTab", "scripting"
+    "activeTab", "http://*/*", "https://*/*"
   ],
-  "host_permissions":["*://*.leetcode.com/*"],
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
-  "action": {}
+  "browser_action": {
+      "default_title": "URLColors",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
 }
