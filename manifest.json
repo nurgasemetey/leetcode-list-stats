@@ -1,0 +1,14 @@
+{
+  "name": "LeetcodeListStats",
+  "short_name": "LeetcodeListStats",
+  "description": "Mark website if it is outside of visit hours",
+  "manifest_version": 3,
+  "version": "0.1",
+  "permissions": [
+    "activeTab", "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {}
+}
