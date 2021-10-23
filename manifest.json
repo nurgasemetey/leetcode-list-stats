@@ -1,10 +1,10 @@
 {
-  "name": "LeetcodeListStats",
+  "name": "Leetcode List Stats",
   "short_name": "LeetcodeListStats",
-  "description": "Mark website if it is outside of visit hours",
-  "version": "1.0.1",
+  "description": "Shows solved/total for Leetcode lists",
+  "version": "1.0.0",
   "permissions": [
-    "activeTab", "http://*/*", "https://*/*"
+    "activeTab", "*://*.leetcode.com/*"
   ],
   "background": {
     "scripts": ["background.js"]
