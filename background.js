@@ -8,10 +8,13 @@ document.addEventListener('DOMContentLoaded', function () {
           code: `
           var totalProblems = document.getElementsByClassName('css-alevek').length;
           var solvedProblems = document.getElementsByClassName('text-success fa fa-check css-alevek').length;
-          if(document.getElementsByClassName("list-name-header-shared").length>0) {
-            var text = document.getElementsByClassName("list-name-header-shared")[0].innerText;
-            document.getElementsByClassName("list-name-header-shared")[0].innerText=text +"->Solved/Total - "+solvedProblems+"/"+totalProblems;
-          }
+
+          var el = document.createElement('div');
+          el.setAttribute('class', 'panel-heading');
+          el.setAttribute('id', 'leetcode-stat-extension-id')
+          el.innerText="Problems solved:"+solvedProblems+"/"+totalProblems;
+          
+          document.getElementsByClassName("panel-heading")[2].parentNode.insertBefore(el, document.getElementsByClassName("panel-heading")[2].nextSibling);
           `
         }
       );
@@ -25,11 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
         tabId,
         {
           code: `
-          if(document.getElementsByClassName("list-name-header-shared").length>0) {
-            var text = document.getElementsByClassName("list-name-header-shared")[0].innerText;
-            var splitted = text.split("->Solved/Total - ");
-            document.getElementsByClassName("list-name-header-shared")[0].innerText=splitted[0]; 
-          } 
+          var el = document.getElementById("leetcode-stat-extension-id");
+          if(el) {
+            el.parentNode.removeChild(el)
+          }
           `
         }
       );
@@ -39,10 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
           code: `
           var totalProblems = document.getElementsByClassName('css-alevek').length;
           var solvedProblems = document.getElementsByClassName('text-success fa fa-check css-alevek').length;
-          if(document.getElementsByClassName("list-name-header-shared").length>0) {
-            var text = document.getElementsByClassName("list-name-header-shared")[0].innerText;
-            document.getElementsByClassName("list-name-header-shared")[0].innerText=text +"->Solved/Total - "+solvedProblems+"/"+totalProblems;
-          }
+
+          var el = document.createElement('div');
+          el.setAttribute('class', 'panel-heading');
+          el.setAttribute('id', 'leetcode-stat-extension-id')
+          el.innerText="Problems solved:"+solvedProblems+"/"+totalProblems;
+          
+          document.getElementsByClassName("panel-heading")[2].parentNode.insertBefore(el, document.getElementsByClassName("panel-heading")[2].nextSibling);
+
           `
         }
       );
