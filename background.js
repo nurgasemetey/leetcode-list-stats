@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
           el.setAttribute('id', 'leetcode-stat-extension-id')
           el.innerText="Problems solved: "+solvedProblems+"/"+totalProblems+" - " + perc+"%";
 
+          var btn = document.createElement("BUTTON");
+          btn.innerHTML = "CLICK ME";  
+          btn.onclick = function(){
+            alert('here be dragons');return false;
+          };
+          el.appendChild(btn);
+
+          
           
           document.getElementsByClassName("panel-heading")[2].parentNode.insertBefore(el, document.getElementsByClassName("panel-heading")[2].nextSibling);
           `
@@ -50,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
           el.setAttribute('id', 'leetcode-stat-extension-id')
           el.innerText="Problems solved: "+solvedProblems+"/"+totalProblems+" - " + perc+"%";
 
+          var btn = document.createElement("BUTTON");
+          el.appendChild(btn);
           
           document.getElementsByClassName("panel-heading")[2].parentNode.insertBefore(el, document.getElementsByClassName("panel-heading")[2].nextSibling);
 
