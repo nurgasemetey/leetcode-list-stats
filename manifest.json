@@ -2,12 +2,15 @@
   "name": "Leetcode List Stats",
   "short_name": "LeetcodeListStats",
   "description": "Shows solved/total for Leetcode lists",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "permissions": [
     "activeTab", "*://*.leetcode.com/*"
   ],
   "background": {
     "scripts": ["background.js"]
+  },
+  "icons": {
+    "128":"icon128.png"
   },
   "browser_action": {
       "default_title": "Leetcode List Stats",
