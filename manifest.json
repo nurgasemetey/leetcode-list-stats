@@ -2,9 +2,9 @@
   "name": "Leetcode List Stats",
   "short_name": "LeetcodeListStats",
   "description": "Shows solved/total for Leetcode lists",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "permissions": [
-    "activeTab", "*://*.leetcode.com/*"
+    "*://*.leetcode.com/*"
   ],
   "background": {
     "scripts": ["background.js"]
