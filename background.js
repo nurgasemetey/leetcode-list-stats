@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function(tabId, changeInfo, tab) {
       // console.log("onUpdated", new Date(), JSON.stringify(changeInfo), "tab", JSON.stringify(tab));
       // removePreviousDivs(tabId);
-      if(tab.url.includes("https://leetcode.com/list")) {
+      if(tab && tab.url && tab.url.includes("https://leetcode.com/list")) {
         chrome.tabs.executeScript(
           tabId,
           {
